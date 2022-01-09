@@ -88,7 +88,6 @@ def send(fbasename: str, "", artist, track_name):
             msg = bot.send_audio(
                 CHAT_ID,
                 audio,
-                caption,
                 performer=artist,
                 title=track_name,
                 thumb=thumb

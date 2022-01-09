@@ -77,10 +77,10 @@ def prepare_payload(current_link: str, folder, title, uploader):
     webp_thumb = Image.open(fbasename + '.webp')
     webp_thumb.save(fbasename + '.jpg')
 
-    return (fbasename, caption, artist, track_name)
+    return (fbasename, "", artist, track_name)
 
 
-def send(fbasename: str, "", artist, track_name):
+def send(fbasename: str, artist, track_name):
     with open(fbasename + '.mp3', 'rb') as audio, \
         open(fbasename + '.jpg', 'rb') as thumb:
         with bot:
